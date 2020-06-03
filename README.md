@@ -16,3 +16,19 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+
+## TODO
+
+À l'aide de React et Material-ui, construire un{" "}
+  [Popover](https://material-ui.com/components/popover/)
+  flexible et réutilisable
+
+### Rules
+   *  Libre à vous du look final, mais un exemple de ce qui est attendu se trouve dans
+    /public/exemple.mp4
+  * Le code doit être clair et de vous
+  * Le data qui doit être contenu dans le popover est dans la variable DATA
+  * L'ajout de tests est fortement conseillé
+
+
