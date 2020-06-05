@@ -1,9 +1,8 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Popover from '@material-ui/core/Popover';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Popover from "@material-ui/core/Popover";
+import Button from "@material-ui/core/Button";
 import CustomTable from "./CustomTable";
-
 
 const useStyles = makeStyles((theme) => ({
   typography: {
@@ -11,12 +10,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-// Standard Material UI popover usage below 
+// Standard Material UI popover usage below
 // with the insertion of a CustomTable component based on Material UI
 
 const SimplePopover = ({ tableTitle, data, buttonTitle }) => {
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -28,14 +25,14 @@ const SimplePopover = ({ tableTitle, data, buttonTitle }) => {
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
+  const id = open ? "simple-popover" : undefined;
 
   return (
     <div>
-      <Button 
-        aria-describedby={id} 
-        variant="contained" 
-        color="primary" 
+      <Button
+        aria-describedby={id}
+        variant="contained"
+        color="primary"
         onClick={handleClick}
       >
         {buttonTitle}
@@ -46,26 +43,18 @@ const SimplePopover = ({ tableTitle, data, buttonTitle }) => {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
+          vertical: "bottom",
+          horizontal: "center",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
+          vertical: "top",
+          horizontal: "center",
         }}
       >
-
-
-        <CustomTable
-                data={data} 
-                title={tableTitle}
-                handleClose={handleClose}
-        />
-
-
+        <CustomTable data={data} title={tableTitle} handleClose={handleClose} />
       </Popover>
     </div>
   );
-}
+};
 
 export default SimplePopover;
